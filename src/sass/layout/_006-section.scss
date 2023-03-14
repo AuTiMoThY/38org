@@ -1,0 +1,76 @@
+.page_section {
+    position: relative;
+    // min-height: 100vh;
+    // height: 1px;
+    display: table;
+    height: inherit;
+    width: 100%;
+    height: 1px;
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    &.first {
+        padding-top: $header_h * 1px;
+    }
+
+    .bg {
+        @include absolute(0, $L:0);
+        @include wh;
+
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    &-inner {
+        display: table-cell;
+        vertical-align: middle;
+        @include wh;
+
+        background-size: cover;
+
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    &-heading {
+
+        &:not(.no-effect) {
+            animation-name: clearTitle;
+            animation-duration: 3s;
+            animation-fill-mode: both;
+            animation-timing-function: $easeInOutCubic2;
+            animation-delay: 0.5s;
+        }
+        // filter: blur(8px);
+
+        .title {
+
+
+            + .txt {
+                padding-top: 40px;
+                margin-top: 40px;
+                border-top: 1px solid rgba(#fff, 0.3);
+            }
+        }
+    }
+}
+
+.page_section {
+
+}
+
+.title_narrate {
+    @include linear-gradient(to bottom, 
+        darken(color('primary'), 3) 0%, 
+        color('primary') 5%, 
+        color('primary') 95%, 
+        darken(color('primary'), 3) 100%, 
+        );
+
+    .dialog_box {
+        position: relative;
+    }
+}

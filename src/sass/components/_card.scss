@@ -1,0 +1,247 @@
+.#{$PROJECT_NAME}_card {
+    .title {
+        @extend .txt-headline3;
+        @include ellipsis;
+    }
+    .date {
+        @extend .txt-s;
+        margin-bottom: 0.5rem;
+    }
+    .link {
+        position: relative;
+        display: inline-block;
+        color: currentColor;
+        &:after {
+            @include psudoClass;
+            @include absolute($B: -3px, $L: 0, $R: 0);
+            @include wh(0%, 1);
+            @include bg(rgba(#fff, 0));
+            margin: auto;
+            transition: all 0.3s $easeInOutCubic;
+        }
+    }
+    &-inner {
+        position: relative;
+        display: block;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 0 rgba(#000, 0);
+        transition: $transition-base;
+        &:hover {
+            box-shadow: $boxShadow-weak;
+            .#{$PROJECT_NAME}_card-cnt {
+                transform: translateY(0px);
+            }
+            .#{$PROJECT_NAME}_card-cnt-more {
+                opacity: 1;
+            }
+            .link {
+                &:after {
+                    width: 100%;
+                    background-color: #fff;
+                }
+            }
+            .img_div {
+                transform: scale(1.05);
+            }
+        }
+    }
+    &-img {
+        overflow: hidden;
+        .img_div {
+            transition: $transition-base;
+        }
+        img {}
+    }
+    &-cnt {
+        @include absolute($B: 0);
+        width: 100%;
+        transform: translateY(24px);
+        transition: all 0.3s $easeInOutCubic3;
+        @include media-down(md) {
+            position: relative;
+            bottom: unset;
+            transform: translateY(0px);
+        }
+        >.inner {
+            position: relative;
+            z-index: 2;
+            padding: 1rem 1.5rem;
+            background-color: rgba(black, 0.5);
+            color: #fff;
+        }
+        &-bg {
+            @include absolute(0, $L: 0);
+            z-index: 1;
+            @include wh;
+            filter: blur(10px);
+            background-position: center bottom;
+            background-size: cover;
+            @include media-down(md) {
+                background-position: center center;
+            }
+        }
+        &-main {}
+        &-more {
+            opacity: 0;
+            // 2max-height: 0;
+            // overflow: hidden;
+            transition: all 0.3s $easeInOutCubic3;
+            display: flex;
+            justify-content: flex-end;
+            @include media-down(md) {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+// > card2
+.#{$PROJECT_NAME}_card2 {
+    .date {}
+    .title {}
+    .tag {}
+    .brief {}
+    &-inner {}
+    &-img {
+        .img_div {}
+    }
+    &-cnt {
+        &-main {}
+    }
+}
+
+.#{$PROJECT_NAME}_card2 {
+    .date {
+        @include absolute(0, $L: 0);
+        z-index: 3;
+        background-color: #fff;
+        border-bottom-right-radius: 10px;
+        padding: 0 1rem 0.5rem;
+        text-align: center;
+    }
+    .title {
+        transition: $transition-base;
+        @include ellipsis;
+    }
+    .tag {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        @extend .txt-grey2;
+        @extend .txt-s;
+        .icon {
+            @include wh(14);
+            margin-right: 5px;
+            flex: 0 0 14px;
+        }
+        path {
+            fill: color("primary");
+        }
+    }
+    .brief {
+        @extend .txt-grey1;
+        @extend .txt-s;
+        @include ellipsis;
+        display: block;
+    }
+    &-inner {
+        position: relative;
+        display: block;
+        background-color: #fff;
+        border-radius: 10px;
+        border: 1px solid color("grey3");
+        color: color("grey1");
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        overflow: hidden;
+        &:hover {
+            text-decoration: none;
+            color: currentColor;
+            box-shadow: map-get($boxShadow, "default");
+            .img_div {
+                transform: scale(1.05);
+            }
+            .title {
+                color: color("primary");
+            }
+        }
+    }
+    &-img {
+        .img_div {
+            transition: $transition-base;
+        }
+    }
+    &-cnt {
+        >.inner {
+            padding: 1.5rem;
+        }
+        &-main {}
+    }
+}
+
+// > card3
+.#{$PROJECT_NAME}_card3 {
+    .title {}
+    &-inner {
+        &:hover {}
+    }
+    &-img {
+        .img_div {}
+    }
+    &-cnt {
+        >.inner {}
+        &-main {}
+    }
+}
+
+.#{$PROJECT_NAME}_card3 {
+    .title {
+        text-align: center;
+    }
+    &-inner {
+        position: relative;
+        display: block;
+        background-color: #fff;
+        border-radius: 10px;
+        border: 1px solid color("grey3");
+        color: color("grey1");
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        overflow: hidden;
+        &:hover {
+            text-decoration: none;
+            color: currentColor;
+            box-shadow: map-get($boxShadow, "default");
+            .img_div {
+                transform: scale(1.05);
+            }
+            .title {
+                color: #fff;
+            }
+            .#{$PROJECT_NAME}_card3-cnt>.inner {
+                background-color: color("primary");
+            }
+        }
+    }
+    &-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 36px;
+        .img_div {
+            // @include wh(200);
+            // padding-bottom: 0;
+            transition: $transition-base;
+        }
+        img {
+            object-fit: contain;
+        }
+    }
+    &-cnt {
+        >.inner {
+            padding: 0.5rem;
+            background-color: color("grey4");
+            transition: $transition-base;
+        }
+        &-main {}
+    }
+}

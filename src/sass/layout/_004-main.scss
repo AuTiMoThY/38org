@@ -1,0 +1,21 @@
+.page_main {
+	position: relative;
+	z-index: 1;
+
+	background-color: color('primary');
+
+	// display: grid;
+	// grid-template-columns: ($aside_w * 1px) calc(100% - 270px);
+
+	// min-height: 100vh;
+	// background-color: transparent;
+
+	.js-open-mobile-menu & {
+		// filter: blur(10px);
+	}
+
+
+	&.page-news {
+
+	}
+}

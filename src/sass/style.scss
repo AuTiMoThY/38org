@@ -1,0 +1,556 @@
+@charset "UTF-8";
+
+/* *****************************************/
+
+
+/*    css
+/*    V 2021.10.08
+/*    Bootstrap v4.5.3
+/*        by AuOzzy
+/******************************************/
+
+/*
+* TOC
+*
+* bootstrap-material-design color (node_modules)
+* BS reset (node_modules)
+* BS display (node_modules)
+* BS flex (node_modules)
+* BS Grid (node_modules)
+* CSS START
+* waves
+* global / base
+* animate keyframes
+* svg sprite
+* components
+* layout
+* custom
+*/
+
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+// (node_modules)
+@import "bootstrap/scss/functions";
+// (node_modules)
+@import "bootstrap/scss/variables";
+// (node_modules)
+@import "bootstrap/scss/mixins";
+// custom grid-breakpoints --------------------------
+$grid-breakpoints: (xxs: 0, xs: 375px, sm: 576px, md: 768px, lg: 1024px, xl: 1280px, xxl: 1366px, );
+$container-max-widths: (xs: 91.4%, md: 89.5%, xl: 1200px);
+$grid-columns: 12;
+$grid-gutter-width: 24px;
+// .media_temp {
+//  @include media-breakpoint-down(xxs) {
+//     /* xxs max-width: 374.98px */
+//  }
+//  @include media-breakpoint-down(xs) {
+//     /* xs max-width: 575.98px*/
+//  }
+//  @include media-breakpoint-down(sm) {
+//     /* sm max-width: 767.98px*/
+//  }
+//  @include media-breakpoint-down(md) {
+//     /* md max-width: 1023.98px*/
+//  }
+//  @include media-breakpoint-down(lg) {
+//     /* lg max-width: 1279.98px*/
+//  }
+//  @include media-breakpoint-down(xl) {
+//     /* xl max-width: 1365.98px*/
+//  }
+//  @include media-breakpoint-down(xxl) {
+//     /* xxl */
+//  }
+// }
+// /******************************************/
+// /* > bootstrap-material-design color (node_modules)
+// /******************************************/
+// @import "bootstrap-material-design/scss/variables/colors";
+
+/******************************************/
+
+
+/* > BS reset (node_modules)
+/******************************************/
+
+@import "bootstrap/scss/reboot";
+
+/******************************************/
+
+
+/* > BS display (node_modules)
+/*****************************************/
+
+@import "bootstrap/scss/utilities/display";
+
+/******************************************/
+
+
+/* > BS flex (node_modules)
+/******************************************/
+
+@import "bootstrap/scss/utilities/flex";
+
+/******************************************/
+
+
+/* > BS Grid (node_modules)
+/******************************************/
+
+@import "bootstrap/scss/grid";
+// (node_modules)
+@import "bootstrap/scss/utilities/spacing";
+// (node_modules)
+@import "bootstrap/scss/utilities/text";
+// (node_modules)
+// @import "bootstrap/scss/utilities/float";
+// _components.scss
+// @import "bootstrap/scss/forms"; //(node_modules)
+// @import "bootstrap/scss/input-group"; //(node_modules)
+
+/* > CSS START */
+
+
+/* ================================================================================ */
+/* ================================================================================ */
+/* ================================================================================ */
+/* ..######...######...######.........######..########....###....########..######## */
+/* .##....##.##....##.##....##.......##....##....##......##.##...##.....##....##... */
+/* .##.......##.......##.............##..........##.....##...##..##.....##....##... */
+/* .##........######...######.........######.....##....##.....##.########.....##... */
+/* .##.............##.......##.............##....##....#########.##...##......##... */
+/* .##....##.##....##.##....##.......##....##....##....##.....##.##....##.....##... */
+/* ..######...######...######.........######.....##....##.....##.##.....##....##... */
+/* ================================================================================ */
+/* ================================================================================ */
+/* ================================================================================ */
+
+// /******************************************/
+// /* > waves
+// /******************************************/
+// @import "_waves";
+@import "_sass-image";
+// custom variables
+@import "variable";
+@import "core/_custom_variable";
+// scss function
+@import "core/function/**/*.scss";
+// mixin
+@import "_mixin";
+// csshake (node_modules)
+@import "csshake/scss/tools";
+
+/*========================================================================*/
+
+
+/*    > global / base */
+
+
+/*========================================================================*/
+
+@import "_base";
+
+/*========================================================================*/
+
+
+/*    > animate keyframes  */
+
+
+/*========================================================================*/
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50%, 100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes enlarge {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(1.05, 1.05);
+    }
+}
+
+@keyframes clearTitle {
+    0% {
+        filter: blur(8px);
+    }
+
+    20% {
+        filter: blur(3px);
+    }
+
+    30% {
+        filter: blur(5px);
+    }
+
+    100% {
+        filter: blur(0px);
+    }
+}
+
+@keyframes starFlash {
+    0%, 30%, 100% {
+        filter: drop-shadow(0px 0px 0px rgba(238, 199, 99, 0));
+    }
+    15% {
+        filter: drop-shadow(0px 0px 30px rgba(238, 199, 99, 0.5));
+    }
+
+}
+
+@keyframes scrollLine {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+@keyframes chapter1_3_pic {
+    0%, 100% {
+        transform: translate(0%, 0%) scale(1);
+    }
+
+    25% {
+        transform: translate(1%, 3%) scale(1.05);
+    }
+
+    50% {
+        transform: translate(3%, 1%) scale(1);
+    }
+
+    75% {
+        transform: translate(1%, 1%) scale(1.05);
+    }
+}
+
+// /*========================================================================*/
+//     > svg sprite
+// /*========================================================================*/
+// @import "../view/sprite";
+
+/*------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------*/
+
+
+/*========================================================================*/
+
+
+/*    > components */
+
+
+/*========================================================================*/
+
+@import "_components";
+
+/*------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------*/
+
+
+/*========================================================================*/
+
+
+/*    > layout  */
+
+
+/*========================================================================*/
+
+@import "_layout";
+
+/*------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------*/
+
+
+/*========================================================================*/
+
+
+/*    > custom  */
+
+
+/*========================================================================*/
+
+@import "custom/**/*.scss";
+
+.drechifont {
+    
+}
+
+
+#wpadminbar {
+    @media screen and (max-width: 600px) {
+        position: fixed;
+    }
+}
+
+.tptn_posts_widget {
+    padding: 0 1rem;
+
+    ul {
+        padding-left: 0;
+        @extend .lis-n;
+    }
+
+    li {
+        padding: 1rem 0;
+
+        &:not(:first-of-type) {
+            border-top: 1px solid #F5F5F5;
+        }
+    }
+
+    .tptn_after_thumb {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "date""title";
+    }
+
+    .tptn_date {
+        grid-area: date;
+        margin-bottom: 4px;
+        @extend .txt-grey2;
+        @extend .txt-s;
+    }
+
+    .tptn_link {
+        grid-area: title;
+    }
+}
+
+.widget_search {
+    .searchform {
+        padding: 1rem;
+
+        >div {
+            height: 56px;
+            border-radius: 10px;
+            background-color: #F5F5F5;
+            border: none;
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="text"] {
+            flex: 1 1 calc(100% - 40px);
+            width: auto;
+            margin-right: 1rem;
+            background-color: transparent;
+            border: none;
+        }
+
+        input[type="submit"] {
+            flex: 0 0 40px;
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            border: none;
+            background-color: transparent;
+            transition: $transition-base;
+            text-indent: -9999px;
+            background-image: url(http://green-furniture1.designhu-demo.com/wp-content/uploads/2021/08/magnify.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: $transition-base;
+
+            &:hover {
+                background-color: #fff;
+            }
+        }
+    }
+
+    .screen-reader-text {
+        display: none;
+    }
+}
+
+.greenFurn1_frm-label {
+    width: 100%;
+    text-align: left;
+}
+
+.greenFurn1_frm-rcxlist {
+    .wpcf7-list-item {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        margin: 0;
+
+        label {
+            margin-bottom: 0;
+
+            &:before {
+                // @include circle(16);
+            }
+        }
+
+        input {
+            display: none;
+
+            &:checked {
+                +.wpcf7-list-item-label {
+                    &:before {
+                        border-color: #179859;
+                    }
+
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .wpcf7-list-item-label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        word-break: keep-all;
+        white-space: nowrap;
+
+        &:before {
+            @include psudoClass;
+            @include circle(16);
+            margin-right: 0.5rem;
+            border: 1px solid #B3B3B3;
+            transition: $transition-base;
+        }
+
+        &:after {
+            @include psudoClass;
+            @include absolute($L: 4);
+            @include circle(8);
+            background-color: #179859;
+            transition: $transition-base;
+            opacity: 0;
+        }
+    }
+}
+
+.wpcf7-not-valid-tip {
+    @include absolute(100%, $L: 10px);
+    z-index: 10;
+    padding: 0.3rem;
+    background-color: #CB0C0C;
+    border-radius: 5px;
+    color: #fff;
+
+    &:before {
+        @include psudoClass;
+        @include absolute(-6, $L: 5px);
+        @include triangle(top, #CB0C0C, 6px);
+    }
+}
+
+.wpcf7-submit {
+    +.ajax-loader {
+        @include absolute(50%, $L: 50%);
+        transform: translate(-50%, -50%);
+        margin: 0;
+    }
+}
+
+.frm-uName {
+    .greenFurn1_field-append {
+        label {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.greenFurn1_select {
+    .select2-container--default .select2-selection--single {
+        border: none;
+    }
+}
+
+.greenFurn1_field {
+    .wpcf7-form-control-wrap {
+        width: 100%;
+        flex: 1;
+    }
+}
+
+.greenFurn1_field-input-group {
+    .wpcf7-form-control-wrap {
+        flex: 1 1 auto;
+        width: 1%;
+    }
+}
+
+.wpcf7-form-control-wrap {
+    display: block;
+}
+
+.widget_search {
+    .web_search-field {
+        width: 100%;
+    }
+}
+
+.sitemap-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 5%;
+    .menu-item {
+        >a {
+            display: inline-block;
+            text-decoration: none;
+            color: color("grey2");
+            @extend .txt-s;
+            @include hover_line(2, color("grey2"));
+
+            &:hover {}
+        }
+    }
+
+    >.menu-item>a {
+        margin-bottom: 1.5rem;
+        color: color("grey1");
+        @extend .txt-h4;
+    }
+
+    .sub-menu {
+        padding-left: 0;
+        @extend .lis-n;
+
+        .menu-item {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    background-color: #fff;
+    margin: 0;
+}

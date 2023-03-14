@@ -1,0 +1,2 @@
+
+const CONFIG = {"VERSION":"20211008","PROJECT_NAME":"MWF"};

@@ -1,0 +1,7 @@
+.link_default {
+	color: color('2nd1');
+
+	@include hover_line(2, color('primary'));
+	&:hover {
+	}
+}

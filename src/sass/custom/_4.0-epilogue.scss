@@ -1,0 +1,89 @@
+.section-epilogue-title {
+    .page_section-inner {
+        width: 100%;
+    }
+    
+    .title-txtimg {
+        @include rwdBlock(1920, 1080);
+        margin-bottom: 0;
+    }
+
+    .narrate {
+        @include absolute($B:0, $L:0);
+        width: 100%;
+        padding: 2rem;
+
+        text-align: center;
+
+        .txt {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.dialog_box {
+
+    @include relative($B:0, $L:0);
+    width: 100%;
+    height: 20vh;
+    // opacity: 0;
+
+    // animation-name: fadeIn;
+    // animation-delay: 2.5s;
+    // animation-duration: 0.3s;
+    // // animation-iteration-count: infinite;
+    // animation-fill-mode: both;
+
+    .txt {
+        @include absolute(0, $L:50%);
+        transform: translateX(-50%);
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(#fff, 0.5);
+        padding: 0.8rem 1.6rem;
+        border-radius: 10px;
+
+        white-space: nowrap;
+        word-break: keep-all;
+        
+        opacity: 0;
+
+        animation-name: fadeIn;
+        animation-delay: 2.5s;
+        animation-duration: 0.3s;
+        // animation-iteration-count: infinite;
+        animation-fill-mode: both;
+
+        &::after {
+            @include psudoClass;
+            @include absolute($B:-12px, $L:50%);
+            transform: translateX(-50%);
+            @include triangle(bottom, #fff, 12px);
+        }
+    }
+
+    &-line {
+        @include absolute($B:0, $L:50%);
+        transform: translateX(-50%);
+        width: 1px;
+        height: calc(100% - 90px - 15px);
+
+        // opacity: 0;
+
+        // animation-name: fadeIn;
+        // animation-delay: 3s;
+        // animation-duration: 0.3s;
+        // // animation-iteration-count: infinite;
+        // animation-fill-mode: both;
+        
+        .line {
+            @include wh;
+            background-color: #fff;
+
+            animation-name: scrollLine;
+            animation-delay: 3s;
+            animation-duration: 0.3s;
+            // animation-iteration-count: infinite;
+            animation-fill-mode: both;
+        }
+    }
+}

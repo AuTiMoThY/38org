@@ -1,0 +1,112 @@
+// .chapter2-store-txt {
+//     width: percentage(476 / 1440);
+// }
+
+.section-chapter2-title {
+    .page_section-inner {
+        width: 100%;
+    }
+    
+    .title-txtimg {
+        @include rwdBlock(1920, 1080);
+        margin-bottom: 0;
+    }
+
+    .narrate {
+        @include absolute($B:0, $L:0);
+        width: 100%;
+        padding: 2rem;
+
+        text-align: center;
+    }
+}
+
+@for $i from 1 through 6 {
+    .section-chapter2-#{$i} {
+        overflow: hidden;
+        // @extend %bgRadialGradient;
+        .bg {
+            // 
+            // position: relative;
+
+            @include media-down(#{$breakpoint-desktop-mobile}px) {
+                background-position-x: 6%;
+            }
+
+            @include media-down(md) {
+                background-position-x: 0%;
+                display: none;
+            }
+        }
+
+        .mobile-bg {
+            display: none;
+
+            @include media-down(md) {
+                display: block;
+                @include rwdBlock(380, 400);
+            }
+        }
+
+        .page_section-inner {
+            // @extend %bgRadialGradient;
+        }
+
+        @include media-down(sm) {
+            min-height: auto;
+            background-color: #e5e5e5;
+
+            .mobile-bg {
+                position: relative;
+            }
+
+            .page_section-inner {
+                display: block;
+            }
+        }
+    }
+    .section-chapter2-#{$i}-mid {
+        @extend %bgRadialGradient;
+        padding: 1rem 0;
+    }
+}
+
+.section-chapter2-final {
+    @extend %bgRadialGradient;
+}
+
+.section-chapter2-4-mid {
+
+    @include media-down(md) {
+        padding: 2rem 0;
+    }
+    .mid-txt {
+        width: 890px;
+        margin: auto;
+
+        @include media-down(#{$breakpoint-desktop-mobile}px) {
+            width: 90%;
+        }
+    }
+
+    .store-footer {
+        padding-top: 40px;
+        margin-top: 40px;
+        border-top: 1px solid rgba(#fff, 0.3);
+    }
+}
+
+.chapter2-store-txt {
+    @include media-down(#{$breakpoint-desktop-mobile}px) {
+        // padding: 1rem;
+        // background-color: rgba(#000, 0.3);
+        // border-radius: 5px;
+
+        // .txt {
+        //     color: #fff;
+        // }
+
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}

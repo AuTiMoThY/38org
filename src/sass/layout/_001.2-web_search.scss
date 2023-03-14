@@ -1,0 +1,95 @@
+.web_search {
+
+	@include absolute(100%, 0);
+	background-color: #fff;
+	// background-color: rgba(color("2nd3"), 0.8);
+
+	display: flex;
+	align-items: center;
+
+	padding: 0;
+	max-height: 0;
+	overflow: hidden;
+
+	z-index: -1;
+	opacity: 0;
+	box-shadow: map-get($boxShadow, default);
+	transition: $transition-base;
+
+	@include media-down(#{$breakpoint-desktop-mobile}px) {
+		position: relative;
+		top: unset;
+		right: unset;
+
+		padding: 0.8em;
+		max-height: none;
+		z-index: 1;
+		opacity: 1;
+	}
+	
+	&-frm {
+		display: flex;
+		align-items: center;
+	}
+
+
+	.js-open-mobile-menu & {
+
+	}
+	&-field {
+		display: flex;
+		align-items: center;
+	}
+
+	&-input {
+		width: 270px;
+		margin-right: 1rem;
+		background-color: transparent;
+		border: none;
+
+		.js-open-mobile-menu & {
+			width: auto;
+		}
+	}
+
+	&-btn {
+		@include wh(40);
+		border-radius: 5px;
+		border: none;
+		background-color: transparent;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		transition: $transition-base;
+		.icon {
+			width : 18px;
+			height: 18px;
+		}
+
+		path {
+			fill: color("primary");
+		}
+
+		img {
+			display: block;
+		}
+
+		&:hover {
+			background-color: #fff;
+		}
+	}
+
+	.js-open-search & {
+		padding: 0.8rem;
+		max-height: 200px;
+		// top: 100%;
+		z-index: 1;
+		opacity: 1;
+	}
+
+
+	.hide_field & {
+
+	}
+}

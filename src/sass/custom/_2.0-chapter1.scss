@@ -1,0 +1,209 @@
+.section-chapter1-title {
+    // height: 200vh;
+
+    .bg {
+        // height: 100vh;
+    }
+
+    .page_section-inner {
+        // display: block;
+        height: 100vh;
+
+        .container {
+            height: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .page_section-inner {
+        width: 100%;
+    }
+
+    .title-txtimg {
+        @include rwdBlock(1920, 1080);
+        margin-bottom: 0;
+    }
+
+    .narrate {
+        @include absolute($B:0, $L:0);
+        width: 100%;
+        padding: 2rem;
+
+        text-align: center;
+    }
+}
+
+
+.section-chapter1-1 {
+    @extend %bgRadialGradient;
+
+    &-pic {
+        overflow: hidden;
+
+        @include media-down(#{$breakpoint-desktop-mobile}px) {
+            min-height: auto;
+        }
+
+        .bg {
+            @include media-down(#{$breakpoint-desktop-mobile}px) {
+                // display: none;
+                position: relative;
+                @include rwdBlock(1920, 1080);
+            }
+        }
+
+        .bg-m {
+            display: none;
+            // @include media-down(#{$breakpoint-desktop-mobile}px) {
+            //     display: block;
+            //     @include rwdBlock(1920, 1080);
+            // }
+        }
+    }
+}
+
+.section-chapter1-2 {
+    @extend %bgRadialGradient;
+
+    &-pic {
+        overflow: hidden;
+        @include media-down(#{$breakpoint-desktop-mobile}px) {
+            min-height: auto;
+        }
+
+        // min-height: auto;
+
+        // .chapter1-2-bg3 {
+        //     position: relative;
+        // }
+
+        .bg {
+            @include media-down(#{$breakpoint-desktop-mobile}px) {
+                display: none;
+            }
+        }
+
+        .bg-m {
+            display: none;
+            @include media-down(#{$breakpoint-desktop-mobile}px) {
+                display: block;
+                @include rwdBlock(1920, 1080);
+            }
+
+            &:not(.chapter1-2-bg3) {
+                @include absolute(0, $L:0);
+            }
+        }
+    }
+
+    // &-pic-m {
+    //     display: none;
+    //     @include media-down(#{$breakpoint-desktop-mobile}px) {
+    //         display: block;
+    //     }
+    // }
+}
+
+
+// .chapter1-2-bg1,
+// .chapter1-2-bg2,
+// .chapter1-2-bg3 {
+//     @include rwdBlock(1920, 1080);
+// }
+
+
+.section-chapter1-3 {
+    @extend %bgRadialGradient;
+    .txt {
+        text-shadow: 0 0 10px rgba(#fff, 0.5);
+    }
+
+    &-pic {
+        overflow: hidden;
+
+        @include media-down(#{$breakpoint-desktop-mobile}px) {
+            min-height: auto;
+        }
+
+        .bg {
+
+            @include media-down(#{$breakpoint-desktop-mobile}px) {
+                position: relative;
+                @include rwdBlock(1920, 1080);
+            }
+        }
+
+        .bg-ani {
+            @include absolute(0, $L:0);
+            z-index: 2;
+            @include wh;
+    
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+
+            // transform: translate(5%, 5%);
+            transition: all 0.3s $easeInOutCubic3;
+
+            animation-name: chapter1_3_pic;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+
+            @include media-down(#{$breakpoint-desktop-mobile}px) {
+                // position: relative;
+                @include rwdBlock(1920, 1080);
+            }
+        }
+
+    }
+}
+
+.section-chapter1-4 {
+    @extend %bgRadialGradient;
+
+    @include media-down(xs) {
+        padding: 2rem 0;
+    }
+
+    &-pic {
+        overflow: hidden;
+
+        @include media-down(#{$breakpoint-desktop-mobile}px) {
+            min-height: auto;
+        }
+
+        .bg {
+            @include media-down(#{$breakpoint-desktop-mobile}px) {
+                // display: none;
+                position: relative;
+                @include rwdBlock(1920, 1080);
+            }
+        }
+
+    }
+}
+
+.section-chapter1-final {
+    @include media-down(sm) {
+        padding: 2rem 0;
+    }
+
+    .btns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 2rem;
+
+
+        padding-top: 104px;
+
+        @include media-down(sm) {
+            gap: 1rem;
+            flex-direction: column;
+        }
+    }
+}

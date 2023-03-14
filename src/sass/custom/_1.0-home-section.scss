@@ -1,0 +1,139 @@
+
+.section-home-title {
+    .page_section-inner {
+        width: 100%;
+    }
+    .title-txtimg {
+        @include rwdBlock(1920, 1080);
+        margin-bottom: 0;
+    }
+
+
+    .narrate {
+        @include absolute($B:0, $L:0);
+        width: 100%;
+        padding: 2rem;
+
+        text-align: center;
+    }
+}
+
+
+
+%section_picture {
+    @include absolute(0, $L:0);
+    // @include rwdBlock(1920, 1080);
+    @include wh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include media-down(lg) {
+        top: unset;
+        bottom: 0;
+        @include rwdBlock(1920, 1080);
+    }
+}
+
+.section-home-1 {
+    // z-index: 10;
+    .inner-boy {
+        @extend %section_picture;
+        z-index: 2;
+    }
+}
+
+.section-home-2 {
+    .txt {
+        margin-bottom: 2rem;
+    }
+
+    .inner-boy {
+        @extend %section_picture;
+        z-index: 2;
+    }
+
+    .inner-other {
+        @extend %section_picture;
+        z-index: 3;
+    }
+}
+
+.section-home-3 {
+    .inner-boy {
+        @extend %section_picture;
+        z-index: 2;
+    }
+
+    .inner-other {
+        @extend %section_picture;
+        z-index: 1;
+    }
+}
+.section-home-4 {
+    // .bg-people {
+    //     @include absolute($B:0, $L: percentage(91 / 1440));
+    //     width: 814px;
+    //     &-img {
+    //         @include rwdBlock(814, 723);
+    //     }
+    // }
+    .inner-boy {
+        @extend %section_picture;
+        z-index: 2;
+    }
+
+    .inner-other {
+        @extend %section_picture;
+        z-index: 3;
+    }
+}
+.section-home-1, .section-home-4 {
+    // @extend %bgRadialGradient;
+}
+.section-home-2, .section-home-3 {
+
+    .bg {
+        // filter: blur(8px);
+    }
+
+    .page_section-inner {
+        // background-color: rgba(19, 90, 150, 0.5);
+    }
+}
+
+
+.section-home-final {
+    // z-index: 20;
+
+    @include media-down(sm) {
+        padding: 2rem 0;
+    }
+}
+
+
+
+// .page_home {
+//     /* Reserve 100vh per slide (row) */
+// 	display: grid;
+// 	grid-auto-rows: 100vh;
+// 	grid-template-columns: 1fr;
+	
+// 	/* Center slide inside container row, instead of stretching it out */
+// 	place-items: center;
+	
+// 	/* Make it scroll*/
+// 	height: 100vh;
+// 	overflow-y: scroll;
+	
+// 	/* Make it snap */
+// 	scroll-snap-type: y mandatory;
+// 	scroll-behavior: smooth;
+//     .page_section {
+//         /* Snap to center */
+//         scroll-snap-align: center;
+        
+//         /* Always snap */
+//         scroll-snap-stop: always;
+//     }
+// }

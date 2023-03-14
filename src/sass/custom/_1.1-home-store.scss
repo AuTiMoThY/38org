@@ -1,0 +1,106 @@
+// .home-store-wrap {
+//     position: relative;
+//     .wrap-bg {
+//         @include absolute(0, $L:0);
+//         @include rwdBlock(1920, 1080);
+
+//         background-size: cover;
+//         background-position: center center;
+//         background-repeat: no-repeat;
+//     }
+// }
+
+.home-store {
+    overflow: hidden;
+    
+    // @include media-breakpoint-up(lg) {
+    //     min-height: auto;
+    //     .page_section-inner {
+    //         display: block;
+    //         @include rwdBlock(1920, 1080);
+    
+    //         .container {
+    //             @include absolute(50%, 0, $L:0);
+    //             z-index: 10;
+    //             transform: translateY(-50%);
+    //         }
+    //     }
+    // }
+
+
+
+    @include media-down(md) {
+        min-height: auto;
+
+        .page_section-inner {
+            padding-top: 3rem;
+            padding-bottom: 50%;
+        }
+
+    }
+    .store-txt {
+        border-radius: 50px;
+        // background-color: rgba(#fff, 0.1);
+        // padding: 40px;
+        padding-right: 10%;
+
+        position: relative;
+        z-index: 10;
+        
+        @include media-down(md) {
+            padding-right: 0;
+        }
+    }
+
+    .bg {
+        transform: scale(1.1);
+        transform-origin: center center;
+    }
+
+    // .store-img {
+    //     width: 576px;
+    //     opacity: 0;
+    //     transition: $transition-base;
+
+    //     @include fixed(50%);
+    //     z-index: 99;
+    //     transform: translateY(-50%);
+    //     pointer-events: none;
+    //     .img_div {
+    //         @include rwdBlock(576, 619);
+    //     }
+
+    //     @include media-down(md) {
+    //         width: 80%;
+    //     }
+    // }
+    // &.js-current {
+    //     z-index: 20;
+    //     .store-img {
+    //         opacity: 1;
+
+    //     }
+    // }
+
+    // &.section-home-4 {
+    //     .store-img {
+    //         transform: scale(1.2) translateY(-30%);
+    //     }
+    //     .img_div {
+    //         @include rwdBlock(670, 646);
+    //     }
+    // }
+}
+
+
+// .home-store-wrap {
+//     position: relative;
+// }
+
+// .store-img-fixed {
+//     position: fixed;
+//     z-index: 10;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     width: 50%;
+// }

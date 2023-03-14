@@ -1,0 +1,100 @@
+
+.section-thirty-years {
+    &.page_section {
+        height: auto;
+        min-height: unset;
+        padding-top: 104px;
+        padding-bottom: 104px;
+        background-color: #fff;
+    }
+}
+
+.thirty-years-hd {
+    position: relative;
+
+    &:after {
+        @include psudoClass;
+        @include wh(100%, 1);
+        @include linear-gradient(to right, rgba(58, 162, 201, 0) 0%, #3AA2C9 50%, rgba(58, 162, 201, 0) 100%);
+    }
+    .title {
+        margin-bottom: 56px;
+    }
+}
+
+.thirty-years-bd {
+    padding-top: 104px;
+    overflow: hidden;
+}
+
+.thirty-years-accompany-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 12px;
+
+    @include media-down(sm) {
+        // grid-template-columns: repeat(1, 1fr);
+        display: block;
+    }
+
+}
+
+.thirty-years-accompany-item {
+    position: relative;
+    // @include circle(276);
+    @include rwdBlock(276, 276);
+    border-radius: 300px;
+    background-color: color("grey4");
+
+    text-align: center;
+    line-height: 2;
+
+    @include media-down(sm) {
+        height: auto;
+        padding-bottom: 0;
+        padding: 0.3rem 0;
+
+        &:not(:first-of-type) {
+            margin-top: 1rem;
+        }
+    }
+
+    .inner {
+        @include absolute(50%, $L:50%);
+        transform: translate(-50%, -50%);
+        word-break: keep-all;
+
+        @include media-down(sm) {
+            position: relative;
+            top: unset;
+            left: unset;
+            transform: translate(0, 0);
+            height: auto;
+            padding-bottom: 0;
+        }
+    }
+
+    &:nth-of-type(2) {
+        transform: translateY(40px);
+
+        @include media-down(sm) {
+            transform: translateY(0px);
+        }
+    }
+}
+
+.accompany-bear {
+    width: 100%;
+    transform: translateY(40px);
+    .img {
+        @include rwdBlock(300, 313);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    @include media-down(md) {
+        width: 50%;
+        margin: auto;
+    }
+
+}

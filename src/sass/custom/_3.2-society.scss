@@ -1,0 +1,40 @@
+.society {
+    align-items: center;
+
+    &-pic {
+        &::before {
+            @include psudoClass;
+            @include absolute(0, $L:0);
+            @include wh();
+            border: 1px solid color('sup-b');
+            transform: rotate(-15deg);
+        }
+
+    }
+    .img_div {
+        position: relative;
+        @include rwdBlock(476, 714);
+
+    }
+
+
+    &-article {
+        .title {
+            margin-bottom: 40px;
+        }
+
+        .txt {
+            margin-bottom: 40px;
+            @extend %txt-common-style;
+            line-height: 2;
+
+            &:first-of-type {
+                
+            }
+        }
+
+        .link {
+            margin-top: 40px;
+        }
+    }
+}

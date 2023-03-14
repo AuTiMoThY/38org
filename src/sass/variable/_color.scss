@@ -1,0 +1,18 @@
+// > color
+$colors: map-merge(
+    (
+        "primary"   : #135A96,
+        "secondary1": #1874C2,
+        "secondary2": #EEC763,
+        "2nd1"      : #1874C2,
+        "2nd2"      : #EEC763,
+        "sup-b"     : #1874C2,
+        "sup-y"     : #EEC763,
+        "grey1"     : #666666,
+        "grey2"     : #C2BFBD,
+        "grey3"     : #DAD8D7,
+        "grey4"     : #FAFAF9,
+        "grey5"     : #FFFFFF,
+    ),
+    $colors
+);

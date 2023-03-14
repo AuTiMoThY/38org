@@ -1,0 +1,76 @@
+// > global
+
+// @font-face {
+// 	font-family: 'ttwcenmt';
+// 	src: url('./ttwcenmt.eot');
+// 	src: local('ttwcenmt'), url('./ttwcenmt.woff') format('woff'), url('./ttwcenmt.ttf') format('truetype');
+// }
+
+// :defined { display: block; }
+
+html, body {
+	// overflow: hidden;
+	// height: 100%;
+	// min-width: $cnt_width;
+}
+
+body {
+	font-family: $NotoSansTC;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+
+	color: color('grey1');
+}
+
+p.txt:last-of-type {
+	margin-bottom: 0;
+}
+
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+
+.td-u {
+	text-decoration: underline;
+}
+
+.inner-table {
+	display: table;
+}
+
+.inner-tablerow {
+	display: table-row;
+}
+
+.inner-tablecell {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+
+
+select {
+	appearance: none;
+	@include media-breakpoint-down(xs){
+		appearance: inherit;
+	};
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+

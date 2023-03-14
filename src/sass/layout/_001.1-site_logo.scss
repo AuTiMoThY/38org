@@ -1,0 +1,16 @@
+
+.site_logo {
+	@include absolute(50%, $L: 1rem);
+	transform: translateY(-50%);
+	width: 290px;
+	&-img {
+		@include rwdBlock(290, 40);
+	}
+
+	@include media-down(sm) {
+		width: 290px * 0.8;
+	}
+	@include media-down(xs) {
+		width: 290px * 0.6;
+	}
+}

@@ -1,0 +1,35 @@
+
+
+body {
+    // transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    // transition: $transition-base;
+    // &.js-open-mobile-menu {
+    //     padding-right: #{$mobile-menu-w}vw;
+    // }
+}
+
+.body_wrap {
+    position: relative;
+    overflow: hidden;
+    // transition: $transition-base;
+    // .js-open-mobile-menu & {
+    //     padding-right: #{$mobile-menu-w}vw;
+    // }
+}
+
+// .m_mask {
+// 	@include wh;
+// 	@include fixed(0, $L:0);
+// 	z-index: 10;
+// 	background-color: #fff;
+// 	opacity: 0.5;
+// 	display: none;
+// 	.js-show-mmenu & {
+// 		display: block;
+// 	}
+// }
+
+.page_wrap {
+
+}
+

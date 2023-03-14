@@ -1,0 +1,104 @@
+.web_aside {
+	position: relative;
+	// padding-top: $header_h * 1px;
+	&-inner {
+		margin-bottom: 40px;
+		border-radius: 10px;
+		border: 1px solid color("grey3");
+		background-color: #fff;
+		box-shadow: map-get($boxShadow, "default");
+		overflow: hidden;
+
+		@include media-down($breakpoint-desktop-mobile * 1px) {
+			margin-bottom: 1rem;
+		}
+
+		&-hd {
+			padding: 0.5rem 0;
+			text-align: center;
+			
+			background-color: color("2nd3");
+
+
+			.title {
+				margin-bottom: 0;
+							
+				@extend .txt-2nd2;
+				@extend .txt-headline4;
+			}
+
+			@include media-down($breakpoint-desktop-mobile * 1px) {
+				position: relative;
+				cursor: pointer;
+
+				position: relative;
+				&:after {
+					@include psudoClass;
+					@include absolute(50%, 1rem);
+					transform: translateY(-50%);
+					@include triangle(bottom, color("2nd2"), 0.5rem);
+					
+					.js-open & {
+						transform: translateY(-50%) scaleY(-1);
+					}
+				}
+			}
+	
+		}
+
+		&-bd {
+			padding: 0 1rem;
+			
+			@include media-down($breakpoint-desktop-mobile * 1px) {
+				max-height: 0;
+				overflow: hidden;
+				transition: $transition-base;
+
+				.js-open & {
+					max-height: 500px;
+				}
+			}
+		}
+		
+		&-item {
+
+			&:not(:first-of-type) {
+				border-top: 1px solid color("grey4");
+			}
+
+			.link {
+				display: block;
+			}
+		}
+
+	}
+
+	&-search {
+
+		.web_aside-inner-bd {
+			padding: 1rem;
+
+			@include media-down($breakpoint-desktop-mobile * 1px) {
+				padding: 0;
+			}
+		}
+		
+		&.js-open {
+			.web_aside-inner-bd {
+				@include media-down($breakpoint-desktop-mobile * 1px) {
+					padding: 1rem;
+				}
+			}
+		}
+	}
+
+	.simplebar-scrollbar::before {
+		background-color: color("primary");
+	}
+
+}
+
+%web_aside_link {
+	display: block;
+	padding: 1rem 0;
+}

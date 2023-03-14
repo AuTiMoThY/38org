@@ -1,0 +1,46 @@
+@function get-random($min, $max) {
+    $rand: random();
+    $randomNum: $min + floor($rand * (($max - $min) + 1));
+    
+    @return unquote($randomNum);
+  }
+  
+
+.how-to-item {
+    .star {
+        svg {
+            animation-name: starFlash;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            // animation-fill-mode: both;
+
+        }
+        path {
+            transition: $transition-base;
+        }
+    }
+
+    @for $i from 1 through 5 {
+        &:nth-of-type(#{$i}) {
+            .star {
+                svg {
+                    animation-duration: #{$i + 3}s;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .star {
+            svg {
+                animation-duration: 0s;
+                animation-iteration-count: unset;
+            }
+            path {
+                fill: lighten(#EEC763, 10);
+            }
+        }
+    }
+
+
+}

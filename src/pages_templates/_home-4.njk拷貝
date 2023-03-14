@@ -1,0 +1,26 @@
+<div class="bg">
+	<div class="bg-people">
+		<div class="bg-people-img" style="background-image: url(public/images/home/bg-home-04.png);"></div>
+	</div>
+</div>
+<div class="page_section-inner">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-md-6">
+				<div class="store-txt">
+					<p class="txt txt-headline3">那高舉起的拳頭轉落在我的身上，我緊緊咬著呼呼、不敢哭出聲，眼淚一滴一滴地滑落在呼呼身上。</p>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="store-img">
+					<div class="img_div">
+						<img srcset="
+						  public/images/home/store-4@1x.png 1x,
+						  public/images/home/store-4@2x.png 2x
+						" alt="…">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

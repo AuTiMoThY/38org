@@ -1,0 +1,57 @@
+{% set title = "最新消息" %}
+{% set page_class = "page-news-detail" %}
+{% extends "_layout.njk" %}
+
+
+{% block content %}
+<!-- =========================================================================-->
+<!-- 頁面內容  START-->
+<!-- =========================================================================-->
+<div class="web_main {{ page_class }}">
+    <section class="page_section {{ page_class }}-heading">
+        <div class="container">
+            <div class="page_heading">
+                <h1 class="page_heading-txt txt-grey1 txt-headline3">{{ title }}</h1>
+                <div class="{{ PROJECT_NAME }}_breadcrumb">
+                    <ul class="cf lis-n">
+                        <li class="{{ PROJECT_NAME }}_breadcrumb-item"><a class="link txt-grey2" href="./">首頁</a></li>
+                        <li class="{{ PROJECT_NAME }}_breadcrumb-item current">
+                            <div class="arrow">/</div><a class="link txt-grey2" href="javascript:;">{{ title }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.page_section heading -->
+
+    <div class="container {{ page_class }}-container">
+        <!-- aside.web_aside  START -->
+        <aside class="web_aside">
+
+        </aside>
+        <!-- /aside.web_aside  END -->
+        <!-- main.web_main-content START -->
+        <main class="web_main-content">
+            {% set section_name = "article_list" %}
+            <!-- {{ section_name }} START -->
+            <section class="page_section {{ page_class }}-{{ section_name }}">
+
+            </section>
+            <!-- /section.page_section END  !! -->
+            <!-- {{ section_name }} END ============================= -->
+        </main>
+        <!-- /main.web_main-content END  !! -->
+    </div>
+
+</div>
+<!-- /.web_main END  !! -->
+<!-- =========================================================================-->
+<!-- 頁面內容  END  !!-->
+<!-- =========================================================================-->
+
+{% endblock %}
+
+{% block page_script %}
+
+{% endblock %}

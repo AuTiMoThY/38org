@@ -1,0 +1,29 @@
+.web_goTop {
+	@include fixed($B: -100%, $R: 1.5rem);
+	z-index: 900;
+
+	transition: $transition-base;
+
+
+	&-inner {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include circle(50);
+		background-color: rgba(color("grey4"), 0.8);
+		border: 1px solid color("secondary1");
+
+		transition: $transition-base;
+
+		&:hover {
+			background-color: color("secondary1");
+			color: lighten(color("secondary1"), 50);
+		}
+	}
+
+	&.js-show {
+		bottom: 3rem;
+	}
+
+
+}

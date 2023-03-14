@@ -1,0 +1,43 @@
+{% set title = "成為他們的光" %}
+{% set page_class = "page_epilogue" %}
+{% extends "_layout.njk" %}
+
+
+{% block content %}
+<!-- =========================================================================-->
+<!-- 頁面內容  START-->
+<!-- =========================================================================-->
+<div id="scroll-container" class="page_main {{ page_class }}">
+
+    {% set section_name = "epilogue-title" %}
+    <section id="" class="page_section section-{{ section_name }} text-white">
+        {% include "../pages_templates/_" + section_name + ".njk" %}
+    </section>
+
+    {# <section class="title_narrate text-white text-center pt-5">
+        <p class="txt txt-headline4 mb-5">停下幾分鐘喘口氣，關心一件事情，可能就可以改變某個人的生命。<br>一個鼓勵、一句關懷，都能成為他們的光！</p>
+        <div class="dialog_box">
+            <div class="txt txt-headline3 txt-grey1">親愛的你，我想跟你說...</div>
+            <div class="dialog_box-line">
+                <div class="line"></div>
+            </div>
+        </div>
+    </section> #}
+
+    {% set section_name = "epilogue-encourage" %}
+    <section id="" class="page_section section-{{ section_name }}">
+        {% include "../pages_templates/_" + section_name + ".njk" %}
+    </section>
+
+
+</div>
+<!-- /.web_main END  !! -->
+<!-- =========================================================================-->
+<!-- 頁面內容  END  !!-->
+<!-- =========================================================================-->
+
+{% endblock %}
+
+{% block page_script %}
+<script src="public/js/page/epilogue.js?v={{ VERSION }}"></script>
+{% endblock %}

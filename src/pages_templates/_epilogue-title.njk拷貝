@@ -1,0 +1,15 @@
+<div class="bg" style="background-image: url(public/images/home/bg-home-00@2x.png);"></div>
+<div class="page_section-inner">
+	<div class="container">
+		<div class="page_section-heading text-center">
+			<h2 class="title txt-section-title">成為他們的光</h2>
+			<p class="txt txt-headline4">停下幾分鐘喘口氣，關心一件事情，可能就可以改變某個人的生命。<br>一個鼓勵、一句關懷，都能成為他們的光！</p>
+		</div>
+	</div>
+</div>
+<div class="dialog_box">
+	<div class="txt txt-headline3 txt-grey1">親愛的你，我想跟你說...</div>
+	<div class="dialog_box-line">
+		<div class="line"></div>
+	</div>
+</div>
